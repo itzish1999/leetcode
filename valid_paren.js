@@ -11,17 +11,17 @@ var isValid = function(s) {
     const newArr = [];
     
     // Looking for valid Parentheses of string s
-    for (const vParentheses of s) {
+    for (const i of s) {
         // Checking with the .hasOwnProperty method which is boolean based to see if the property exists or not in array
-        if (hMap.hasOwnProperty(newArr)) {
+        if (hMap.hasOwnProperty(i)) {
             // newArr.push(newArr) puts the porperties from hMap into the array
-            newArr.push(newArr)
+            newArr.push(i)
         //If condition is false I want to run this else statement
         } else {
             // I am using the .pop() method to remove the last element of the array and returns it
             const closeNewArr = newArr.pop();
             // if statement to compare what's inside the hMap and the array
-            if (newArr !== hMap[closeNewArr]) {
+            if (i !== hMap[closeNewArr]) {
                 return false;
             }
         }

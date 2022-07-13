@@ -1,4 +1,5 @@
 var minRemoveToMakeValid = function(s) {
+<<<<<<< HEAD
     const sArray = s.split('');
     const stack = [];
     
@@ -15,6 +16,18 @@ var minRemoveToMakeValid = function(s) {
         sArray[stack[j]] = ""
     }
     return sArray.join("")
+=======
+    const S = s.split("")
+    let len = S.length, stack = []
+    for (let i = 0, c = S[0]; i < len; c = S[++i])
+        if (c === ")")
+            if (stack.length) stack.pop()
+            else delete S[i]
+        else if (c === "(") stack.push(i)
+    for (let i = 0; i < stack.length; i++)
+        delete S[stack[i]]
+    return S.join("")
+>>>>>>> cdc47dd53c9041560c6a39db3895d654d8463c31
 };
 
 s = "lee(t(c)0)de)";

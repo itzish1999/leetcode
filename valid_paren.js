@@ -12,9 +12,9 @@ var isValid = function(s) {
     
     // Looking for valid Parentheses of string s
     for (const i of s) {
-        // Checking with the .hasOwnProperty method which is boolean based to see if the property exists or not in array
+        // Checking with the .hasOwnProperty method which is boolean based to see if any of the indexes in s is in map
         if (hMap.hasOwnProperty(i)) {
-            // newArr.push(newArr) puts the porperties from hMap into the array
+            // newArr.push(newArr) pushes the i of s into the array
             newArr.push(i)
         //If condition is false I want to run this else statement
         } else {
